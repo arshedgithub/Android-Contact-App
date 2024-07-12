@@ -1,3 +1,5 @@
+package com.example.adapetertest;
+
 public class Contact {
 
     private String contactName;

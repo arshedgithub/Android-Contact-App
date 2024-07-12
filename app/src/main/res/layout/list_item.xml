@@ -13,21 +13,21 @@
         android:textStyle="bold"
         android:padding="25sp" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/contact_image"
-        android:layout_width="100sp"
-        android:layout_height="100sp"
-        android:padding="10sp"
-        app:cardCornerRadius="150sp"
-        android:layout_toEndOf="@id/contact_name">
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/contact_image"-->
+<!--        android:layout_width="100sp"-->
+<!--        android:layout_height="100sp"-->
+<!--        android:padding="10sp"-->
+<!--        app:cardCornerRadius="150sp"-->
+<!--        android:layout_toEndOf="@id/contact_name">-->
 
-        <ImageView
-            android:scaleType="fitCenter"
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            android:src="@drawable/john_doe" />
+<!--        <ImageView-->
+<!--            android:scaleType="fitCenter"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:src="@drawable/john_doe" />-->
 
-    </androidx.cardview.widget.CardView>
+<!--    </androidx.cardview.widget.CardView>-->
 
 
 
