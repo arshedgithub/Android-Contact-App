@@ -21,9 +21,9 @@ public class MainActivity extends AppCompatActivity {
         String[] allContacts = getResources().getStringArray(R.array.contacts);
         populateContactList(allContacts);
 
-        ContactAdapter adapter = new ContactAdapter(getApplicationContext(), R.layout.list_item, contactArrayList);
-        ListView listView = findViewById(R.id.contact_list);
-        listView.setAdapter(adapter);
+//        ContactAdapter adapter = new ContactAdapter(getApplicationContext(), R.layout.list_item, contactArrayList);
+//        ListView listView = findViewById(R.id.contact_list);
+//        listView.setAdapter(adapter);
 
     }
 
