@@ -16,23 +16,25 @@ import java.util.ArrayList;
 public class ContactAdapter extends ArrayAdapter<Contact> {
     private ArrayList<Contact> contactArrayList;
 
-    public ContactAdapter(@NonNull Context context, int resource, ArrayList<Contact> contactArrayList) {
-        super(context, resource);
-        this.contactArrayList = contactArrayList;
+    public ContactAdapter(@NonNull Context context, ArrayList<Contact> contactArrayList) {
+        super(context, R.layout.list_item, contactArrayList);
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        int contactIndex = position;
+        Contact contactData = getItem(position);
+
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
-//        ImageView contactImage = convertView.findViewById(R.id.contact_image);
-        TextView contactName = convertView.findViewById(R.id.contact_name);
 
-//        contactImage.setImageResource(contactArrayList.get(position).getImageId());
-        contactName.setText(contactArrayList.get(position).getContactName());
+        ImageView contactImage = convertView.findViewById(R.id.list_image);
+        TextView contactName = convertView.findViewById(R.id.list_name);
+
+        contactImage.setImageResource(contactData.getImageId());
+        contactName.setText(contactData.getContactName());
+        
         return convertView;
     }
 }
