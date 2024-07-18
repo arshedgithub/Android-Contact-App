@@ -34,7 +34,7 @@ public class ContactAdapter extends ArrayAdapter<Contact> {
 
         contactImage.setImageResource(contactData.getImageId());
         contactName.setText(contactData.getContactName());
-        
+
         return convertView;
     }
 }

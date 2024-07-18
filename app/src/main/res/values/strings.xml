@@ -9,4 +9,12 @@
         <item>Lakshan Ruwinda</item>
     </string-array>
 
+    <string-array name="contact_numbers">
+        <item>07832958293</item>
+        <item>07832788293</item>
+        <item>07902958293</item>
+        <item>07832959093</item>
+        <item>07832958803</item>
+    </string-array>
+
 </resources>
