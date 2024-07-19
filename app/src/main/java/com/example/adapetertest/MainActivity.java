@@ -7,11 +7,15 @@ import android.widget.AdapterView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.adapetertest.databinding.ActivityMainBinding;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    FloatingActionButton fab;
+
+//    private Firebase
     private ActivityMainBinding binding;
     ContactAdapter contactAdapter;
     private ArrayList<Contact> contactArrayList = new ArrayList<>();
@@ -22,7 +26,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        fab = findViewById(R.id.fab);
 
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, AddContact.class);
+                startActivity(intent);
+            }
+        });
         String[] allContacts = getResources().getStringArray(R.array.contacts);
         String[] allContactNo = getResources().getStringArray(R.array.contact_numbers);
 
