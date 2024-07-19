@@ -4,9 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ListView;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.adapetertest.databinding.ActivityMainBinding;
@@ -28,10 +25,10 @@ public class MainActivity extends AppCompatActivity {
 
         String[] allContacts = getResources().getStringArray(R.array.contacts);
         String[] allContactNo = getResources().getStringArray(R.array.contact_numbers);
-//        populateContactList(allContacts);
 
         for (int i = 0; i < allContacts.length; i++) {
-            contactArrayList.add(new Contact(allContacts[i], "", "", R.drawable.john_doe));
+            contactData = new Contact(allContacts[i], allContactNo[i], "jgj", R.drawable.john_doe);
+            contactArrayList.add(contactData);
         }
 
         contactAdapter = new ContactAdapter(MainActivity.this, contactArrayList);
@@ -42,15 +39,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(MainActivity.this, Detailed_item.class);
-                intent.putExtra("name", allContacts[i]);
+                intent.putExtra("contactName", allContacts[i]);
                 intent.putExtra("contactNumber", allContactNo[i]);
+                intent.putExtra("city", allContacts[i]);
+                intent.putExtra("image", R.drawable.john_doe);
                 startActivity(intent);
             }
         });
     }
-
-//    public void populateContactList(String[] contacts){
-//        contactArrayList.add(new Contact(contacts[0], R.drawable.john_doe));
-//        contactArrayList.add(new Contact(contacts[1], R.drawable.john_doe));
-//    }
 }

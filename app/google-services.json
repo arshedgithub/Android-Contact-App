@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "273195491788",
+    "project_id": "android-contact-app-712a7",
+    "storage_bucket": "android-contact-app-712a7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:273195491788:android:2c674fd380427a69b1bd69",
+        "android_client_info": {
+          "package_name": "com.example.adapetertest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3zYyuqrKJOKQiJ5PrKQ5_FB81L7raGfo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
